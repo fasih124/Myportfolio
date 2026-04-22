@@ -42,7 +42,7 @@ export const projects: Project[] = [
     liveHref: "https://zesto-xi.vercel.app/",
     caseStudyHref: "/work/zesto",
     imageAlt: "Zesto Project",
-imageSrc: "/images/zesto/screen-01.png", 
+    imageSrc: "/images/zesto/screen-01.PNG", 
     align: "right",
     featured: true,
   },
