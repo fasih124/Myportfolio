@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server"
 
 export async function POST(req: NextRequest) {
   const body = await req.json()
-
   const { name, email, projectType, description } = body
 
   if (!name || !email || !description) {
@@ -12,7 +11,16 @@ export async function POST(req: NextRequest) {
     )
   }
 
-  const res = await fetch("https://formspree.io/f/mzdyvgrn", {
+  const endpoint = process.env.FORMSPREE_ENDPOINT
+
+  if (!endpoint) {
+    return NextResponse.json(
+      { error: "Form configuration error." },
+      { status: 500 }
+    )
+  }
+
+  const res = await fetch(endpoint, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
