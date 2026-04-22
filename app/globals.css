@@ -1,0 +1,253 @@
+/*
+  DESIGN CHOICE: Option A — Warm Terracotta
+  Reason: The warm off-white base and terracotta accent communicate
+  craft, trust, and human quality — fitting for a freelance developer
+  who wants to feel like a trusted craftsman, not a faceless agency.
+  Fraunces brings editorial warmth; DM Sans keeps everything readable.
+*/
+
+@import "tailwindcss";
+
+/* ─── Google Fonts ─────────────────────────────────────────────── */
+
+/* ─── Tailwind v4 Theme ─────────────────────────────────────────── */
+@theme {
+  /* Colors */
+  --color-bg:          #F9F7F4;
+  --color-text:        #1A1A1A;
+  --color-muted:       #6B6B6B;
+  --color-accent:      #C84B31;
+  --color-border:      #E5E0D8;
+  --color-surface:     #F0EDE7;
+
+  /* Fonts */
+  /* --font-display: "Fraunces", Georgia, serif;
+  --font-body:    "DM Sans", sans-serif; */
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+--font-body:    var(--font-dm-sans), sans-serif;
+
+  /* Spacing — strict 8px grid */
+  --spacing-1:  8px;
+  --spacing-2:  16px;
+  --spacing-3:  24px;
+  --spacing-4:  32px;
+  --spacing-5:  40px;
+  --spacing-6:  48px;
+  --spacing-8:  64px;
+  --spacing-10: 80px;
+  --spacing-12: 96px;
+  --spacing-16: 128px;
+
+  /* Typography scale */ 
+  --text-h1:      64px;
+  --text-h2:      40px;
+  --text-h3:      24px;
+  --text-body:    16px;
+  --text-small:   14px;
+  --text-label:   12px;
+
+  /* Line heights */
+  --leading-h1:   72px;
+  --leading-h2:   48px;
+  --leading-h3:   32px;
+  --leading-body: 24px;
+
+  /* Max width */
+  --width-content: 1100px;
+}
+
+/* ─── Base Reset & Defaults ─────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+html {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+/* ─── Typography Classes ────────────────────────────────────────── */
+.h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  line-height: var(--leading-h1);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  line-height: var(--leading-h2);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  line-height: var(--leading-h3);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.body-text {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.label-text {
+  font-family: var(--font-body);
+  font-size: var(--text-label);
+  line-height: var(--leading-body);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* ─── Layout Utilities ──────────────────────────────────────────── */
+.content-wrapper {
+  max-width: var(--width-content);
+  margin-inline: auto;
+  padding-inline: var(--spacing-4);
+}
+
+.section-padding {
+  padding-block: var(--spacing-12);
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-block: var(--spacing-8);
+  }
+
+  .content-wrapper {
+    padding-inline: var(--spacing-2);
+  }
+
+  .h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+/* ─── Hero Entrance Animation ───────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-1 { animation-delay: 0.1s; }
+.animate-fade-up-2 { animation-delay: 0.25s; }
+.animate-fade-up-3 { animation-delay: 0.4s; }
+.animate-fade-up-4 { animation-delay: 0.55s; }
+
+/* ─── Hover Utilities ───────────────────────────────────────────── */
+.hover-accent {
+  transition: color 200ms ease;
+}
+.hover-accent:hover {
+  color: var(--color-accent);
+}
+
+/* ─── Divider ───────────────────────────────────────────────────── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-border);
+  border: none;
+}
+
+/* ─── Stack Tag Pills ───────────────────────────────────────────── */
+.tag-pill {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  line-height: var(--leading-body);
+  font-weight: 400;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 2px 12px;
+}
+
+/* ─── Form Input Style ──────────────────────────────────────────── */
+.form-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  padding-block: var(--spacing-1);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 200ms ease;
+}
+
+.form-input:focus {
+  border-bottom-color: var(--color-accent);
+}
+
+.form-input::placeholder {
+  color: var(--color-border);
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: 500;
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-1);
+}
+
+
+/* ─── Hero Background ───────────────────────────────────────── */
+ 
+.navbar-scrolled {
+  background: linear-gradient(
+    90deg,
+    #F9F7F4 0%,
+    #F5EDE8 50%,
+    #F9F7F4 100%
+  ) !important;
+}
