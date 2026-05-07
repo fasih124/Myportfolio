@@ -84,7 +84,7 @@ export default function Navbar() {
               </a>
             ))}
             <Button href="/contact" variant="ghost">
-              Let's Talk
+              Get Your Site Built
             </Button>
           </nav>
 

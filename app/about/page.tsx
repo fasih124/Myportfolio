@@ -6,39 +6,46 @@ export const metadata = {
   title: "About — Fasih Ahmad",
 };
 /* ── Data ────────────────────────────────────────────────────── */
+// const skills = [
+//   "React",
+//   "Next.js",
+//   "TypeScript",
+//   "JavaScript",
+//   "Node.js",
+//   "Express",
+//   "REST APIs",
+//   "MongoDB",
+//   "Mongoose",
+//   "Flutter",
+//   "Dart",
+//   "Riverpod",
+//   "GoRouter",
+//   "Isar",
+//   "Tailwind CSS",
+//   "Git",
+//   "GitHub",
+//   "Figma",
+//   "Vercel",
+//   "Render",
+// ];
 const skills = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "JavaScript",
-  "Node.js",
-  "Express",
-  "REST APIs",
-  "MongoDB",
-  "Mongoose",
-  "Flutter",
-  "Dart",
-  "Riverpod",
-  "GoRouter",
-  "Isar",
-  "Tailwind CSS",
-  "Git",
-  "GitHub",
-  "Figma",
-  "Vercel",
-  "Render",
+  "Fast loading pages",
+  "Mobile-first design",
+  "Simple enquiry forms",
+  "Clear service pages",
+  "Trust signals built-in",
+  "No monthly fees",
+  "Full ownership",
+  "Built for local businesses",
 ];
-
 const currently = [
   {
-    label: "Building",
-    value: "Asaan Bill — Flutter invoice app for Pakistani shopkeepers",
-    accent: false,
+    label: "Focus",
+    value: "Websites for UK heating engineers",
   },
   {
-    label: "Learning",
-    value: "System design and DevOps fundamentals",
-    accent: false,
+    label: "Build Time",
+    value: "10 days per site",
   },
   {
     label: "Available for",
@@ -62,14 +69,14 @@ export default function AboutPage() {
                 className="h1"
                 style={{ maxWidth: "640px", marginBottom: "24px" }}
               >
-                A little about me
+                Straight forward work. No surprises.
               </h1>
               <p
                 className="body-text"
                 style={{ fontSize: "18px", maxWidth: "520px" }}
               >
-                Developer, problem-solver, and someone who takes the work
-                seriously.
+                I build websites that do what they’re supposed to do. Bring in
+                real enquiries. Not just sit there.
               </p>
             </div>
 
@@ -110,30 +117,19 @@ export default function AboutPage() {
             {/* Left */}
             <div className="flex flex-col gap-[24px]">
               <SectionLabel>My Background</SectionLabel>
-              <h2 className="h2">How I got here</h2>
+              <h2 className="h2">Why clients trust me</h2>
               <div
                 className="flex flex-col gap-[16px]"
                 style={{ color: "var(--color-muted)" }}
               >
                 <p className="body-text">
-                  I'm Fasih Ahmad Khan, a full-stack developer based in Pakistan
-                  with a Bachelor's degree in Software Engineering. I started
-                  writing code because I wanted to build things that worked —
-                  not just theoretically, but in the hands of real people doing
-                  real work.
-                </p>
-                <p className="body-text">
-                  My focus is on web and mobile applications for small
-                  businesses and startups. I work with React and Node.js on the
-                  web side, and Flutter for mobile — a stack I chose
-                  deliberately because it covers what most growing businesses
-                  actually need.
-                </p>
-                <p className="body-text">
-                  I've worked on gym management systems, invoice tools, and food
-                  delivery apps — each one taught me something different about
-                  how to balance clean code with shipping on time. I care about
-                  both.
+                  I’m Fasih Ahmad Khan, a developer focused on building websites
+                  for service businesses. Most clients come to me after wasting
+                  money on something that didn’t work. Slow sites. No enquiries.
+                  Or agencies that disappear. I do the opposite. Clear timeline.
+                  Fixed delivery. No chasing. You know what’s happening at every
+                  step. I’ve built real projects used by real businesses. Not
+                  just demos.
                 </p>
               </div>
             </div>
@@ -141,28 +137,18 @@ export default function AboutPage() {
             {/* Right */}
             <div className="flex flex-col gap-[24px]">
               <SectionLabel>How I Work</SectionLabel>
-              <h2 className="h2">My approach</h2>
+              <h2 className="h2">How projects actually run</h2>
               <div
-                className="flex flex-col gap-[16px]"
+                className="flex flex-col gap-[12px]"
                 style={{ color: "var(--color-muted)" }}
               >
                 <p className="body-text">
-                  I treat every project like it matters — because to the person
-                  who commissioned it, it does. That means clear communication
-                  before I write a line of code, realistic timelines I actually
-                  stick to, and a final product that does what it was built to
-                  do.
-                </p>
-                <p className="body-text">
-                  I work async-first. I give progress updates proactively, flag
-                  blockers early, and don't go quiet for days at a time. If
-                  something isn't working or a requirement changes mid-project,
-                  I say so and we figure it out together.
-                </p>
-                <p className="body-text">
-                  I'm not trying to be the cheapest option or the flashiest. I'm
-                  trying to be the developer you actually want to work with
-                  again.
+                  You won’t be left guessing. Before starting, everything is
+                  clear. What you’re getting. When it’s done. What it costs.
+                  During the build, you get updates without asking. No long
+                  calls. No confusion. Just progress. Once it’s live, you get a
+                  working site that brings in enquiries. Not something you need
+                  to “figure out”.
                 </p>
               </div>
             </div>
@@ -180,7 +166,7 @@ export default function AboutPage() {
         <div className="content-wrapper">
           <SectionLabel>Skills</SectionLabel>
           <h2 className="h2" style={{ marginBottom: "48px" }}>
-            Tools I work with
+            What you actually get
           </h2>
 
           <div className="flex flex-wrap gap-[12px]">
@@ -188,7 +174,11 @@ export default function AboutPage() {
               <span
                 key={skill}
                 className="tag-pill"
-                style={{ fontSize: "14px", padding: "6px 16px" }}
+                style={{
+                  fontSize: "16px",
+                  padding: "6px 16px",
+                  fontWeight: "bold",
+                }}
               >
                 {skill}
               </span>
@@ -204,7 +194,7 @@ export default function AboutPage() {
         <div className="content-wrapper">
           <SectionLabel>Right Now</SectionLabel>
           <h2 className="h2" style={{ marginBottom: "48px" }}>
-            Currently
+            Right now
           </h2>
 
           <div
@@ -250,22 +240,25 @@ export default function AboutPage() {
           <div
             className="flex flex-col md:flex-row items-start md:items-center justify-between gap-[32px]"
             style={{
-              padding: "64px",
+              padding: "40px",
               border: "1px solid var(--color-border)",
               backgroundColor: "var(--color-surface)",
             }}
           >
             <div className="flex flex-col gap-[16px]">
-              <h2 className="h2">Want to work together?</h2>
-              <p className="body-text" style={{ maxWidth: "440px" }}>
-                I'm currently available for new projects. If you have something
-                in mind, I'd love to hear about it.
+              <h2 className="h2">
+                {" "}
+                If your website isn’t bringing jobs, fix it.
+              </h2>
+              <p className="body-text" style={{ maxWidth: "540px" }}>
+                You don’t need more traffic. You need a site that turns visitors
+                into calls.
               </p>
             </div>
 
-            <div className="flex flex-col gap-[12px] items-start md:items-end shrink-0">
+            <div className="flex flex-col gap-[12px] items-start   shrink-0">
               <Button href="/contact" variant="filled">
-                Get In Touch
+                Get My Site Built
               </Button>
               <a
                 href="mailto:contactme@buildbyfasih.me"

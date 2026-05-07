@@ -22,14 +22,15 @@ export default function WorkPage() {
                 className="h1"
                 style={{ maxWidth: "640px", marginBottom: "24px" }}
               >
-                Work
+                Real sites. Real results.
               </h1>
               <p
                 className="body-text"
                 style={{ fontSize: "18px", maxWidth: "480px" }}
               >
-                A selection of projects I've built for real users and
-                businesses.
+                These aren’t templates. These are working sites built to get
+                enquiries. Most HVAC websites load in 6–9 seconds. These load in
+                under 3.
               </p>
             </div>
 
@@ -133,7 +134,7 @@ export default function WorkPage() {
                     <div className="flex flex-wrap gap-[16px] items-center">
                       {project.liveHref !== "#/no" ? (
                         <Button href={project.liveHref} variant="filled">
-                          Live Demo
+                          View Site
                         </Button>
                       ) : (
                         " "
@@ -143,7 +144,7 @@ export default function WorkPage() {
                         href={project.caseStudyHref}
                         className="text-[14px] font-medium text-[var(--color-accent)] hover-accent inline-flex items-center gap-[8px] no-underline"
                       >
-                        Case Study <span aria-hidden="true">→</span>
+                        See Breakdown <span aria-hidden="true">→</span>
                       </a>
                     </div>
                   </div>
@@ -162,13 +163,13 @@ export default function WorkPage() {
       <section className="section-padding">
         <div className="content-wrapper flex flex-col items-center text-center gap-[24px]">
           <h2 className="h2" style={{ maxWidth: "480px" }}>
-            Want to work together?
+            How many enquiries did you miss this month?
           </h2>
           <p className="body-text" style={{ maxWidth: "400px" }}>
-            I'm available for new projects. Let's talk about what you need.
+            If your site isn’t bringing work, it’s costing you money.
           </p>
           <Button href="/contact" variant="filled">
-            Get In Touch
+            Fix My Website
           </Button>
         </div>
       </section>

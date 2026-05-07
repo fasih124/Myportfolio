@@ -13,19 +13,19 @@ export const metadata: Metadata = {
 const contactLinks = [
   {
     icon: Mail,
-    label: "Email",
+    label: "Send a message",
     value: "contactme@buildbyfasih.me",
     href: "mailto:contactme@buildbyfasih.me",
   },
   {
     icon: Link,
-    label: "LinkedIn",
+    label: " See background ",
     value: "linkedin.com/in/FasihAhmadKhan",
     href: "https://www.linkedin.com/in/dev-fasih-ahmad-khan/",
   },
   {
     icon: Calendar,
-    label: "Book a call",
+    label: "Book a quick call",
     value: "calendly.com/fasihAhmadKhan",
     href: "https://calendly.com/fasih-ahmad/discovery-call",
   },
@@ -40,8 +40,8 @@ export default function ContactPage() {
             {/* Left — text */}
             <div>
               <SectionLabel>Contact</SectionLabel>
-              <h1 className="h1" style={{ maxWidth: "640px" }}>
-                Let's build something.
+              <h1 className="h1" style={{ maxWidth: "780px" }}>
+                Phone not ringing? Let’s fix that.
               </h1>
             </div>
             {/* Right — illustration */}
@@ -84,13 +84,20 @@ export default function ContactPage() {
                   className="body-text"
                   style={{ fontSize: "18px", lineHeight: "28px" }}
                 >
-                  Tell me about your project. I read every message and reply
-                  within 24 hours.
+                  If your website isn’t bringing enquiries, something is wrong.
+                  Tell me what you’re currently using and what’s not working.
                 </p>
                 <p className="body-text">
-                  Whether you have a detailed brief or just a rough idea, I'm
-                  happy to talk through it. No hard sell, no obligation — just
-                  an honest conversation about what you need.
+                  No need for a long brief. Just send:
+                </p>
+                <ul className="list-disc ml-3 body-text">
+                  <li> What services you offer </li>
+                  <li>Your area</li>
+                  <li>Your current website (if you have one)</li>
+                </ul>
+                <p className="body-text">
+                  {" "}
+                  I’ll tell you straight if this can work for you.
                 </p>
               </div>
 
@@ -143,20 +150,21 @@ export default function ContactPage() {
                     className="text-[14px] font-medium"
                     style={{ color: "var(--color-text)" }}
                   >
-                    Available for new projects
+                    Taking 2–3 new HVAC sites this month
                   </span>
                 </div>
                 <p
                   className="text-[13px]"
                   style={{ color: "var(--color-muted)" }}
                 >
-                  Currently accepting work starting immediately. Typical
-                  response time is under 24 hours.
+                  Limited slots to keep 10-day delivery. If you’re thinking
+                  about it, don’t wait.
                 </p>
               </div>
             </div>
 
             {/* Right — form */}
+
             <ContactForm />
           </div>
         </div>

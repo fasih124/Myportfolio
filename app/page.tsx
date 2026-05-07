@@ -14,256 +14,44 @@ import Image from "next/image";
 const services = [
   {
     icon: Monitor,
-    title: "Web Application Development",
+    title: "The HVAC Lead Engine",
     description:
-      "Custom web apps and SaaS platforms built on React and Node.js",
+      "A complete website built to get you direct enquiries, not shared leads",
   },
   {
     icon: Smartphone,
-    title: "Mobile App Development",
-    description: "Flutter mobile apps for Android, built for real users",
+    title: "24/7 Lead Capture",
+    description:
+      "Customers send their job details straight to your phone instantly",
   },
   {
     icon: LayoutDashboard,
-    title: "Business Tools & Dashboards",
-    description: "Internal tools, admin panels, and management systems",
+    title: "Speed That Wins Jobs",
+    description:
+      "Loads under 3 seconds so customers don’t leave before calling",
   },
 ];
 
 const stats = [
-  { label: "Projects Delivered", value: "10+" },
-  { label: "Years Building", value: "3" },
-  { label: "Core Stack", value: "React + Flutter" },
-  { label: "Status", value: "Available for Work", accent: true },
+  { label: "Mobile Speed Scores", value: "+90/100" },
+  { label: "Build Time", value: "10 Days" },
+  { label: "Monthly Fees", value: "£0" },
+  { label: "Ownership", value: "100% Yours", accent: true },
 ];
 
 const stackBadges = [
-  "React",
-  "Node.js",
-  "MongoDB",
-  "Flutter",
-  "Next.js",
-  "TypeScript",
+  "Gas Safe Ready",
+  "Mobile First",
+  "Under 3s Load",
+  "No Monthly Fees",
+  "Own Your Leads",
+  "Built for UK Engineers",
 ];
 
 /* ── Page ────────────────────────────────────────────────────── */
 export default function Home() {
   return (
     <main>
-      {/* ── Hero ───────────────────────────────────────────── */}
-      {/* <section className=" py-8  hero-bg ">
-        <div className="content-wrapper">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            {/* Left — text 
-            <div style={{ paddingBottom: "96px" }}>
-              <h1
-                className="h1 animate-fade-up animate-fade-up-1"
-                style={{ marginBottom: "24px" }}
-              >
-                I build web and mobile apps{" "}
-                <span
-                  style={{
-                    color: "var(--color-accent)",
-                    fontStyle: "italic",
-                  }}
-                >
-                  that work.
-                </span>
-              </h1>
-
-              <p
-                className="body-text animate-fade-up animate-fade-up-2"
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "28px",
-                  marginBottom: "40px",
-                }}
-              >
-                Full-stack development for startups and growing businesses —
-                React, Node.js, and Flutter.
-              </p>
-
-              <div
-                className="flex flex-wrap gap-[16px] animate-fade-up animate-fade-up-3"
-                style={{ marginBottom: "48px" }}
-              >
-                <Button href="/work" variant="filled">
-                  See My Work
-                </Button>
-                <Button href="/contact " variant="ghost">
-                  Get In Touch
-                </Button>
-              </div>
-
-              <div className="flex flex-wrap gap-[8px] animate-fade-up animate-fade-up-4">
-                {stackBadges.map((tech) => (
-                  <span key={tech} className="tag-pill">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Right — project preview stack 
-            {/* <div
-              className="hidden md:flex flex-col gap-[12px]"
-              style={{ paddingBottom: "0" }}
-            >
-              {/* Top card — large  
-              <a
-                href="/work/fitzone"
-                className="no-underline block overflow-hidden group"
-                style={{
-                  border: "1px solid var(--color-border)",
-                  backgroundColor: "var(--color-surface)",
-                }}
-              >
-                <div
-                  className="w-full overflow-hidden"
-                  style={{ aspectRatio: "16/9" }}
-                >
-                  {projects[0].imageSrc ? (
-                    <Image
-                      src={projects[0].imageSrc}
-                      alt={projects[0].imageAlt}
-                      width={600}
-                      height={338}
-                      loading="eager"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <span className="label-text">{projects[0].title}</span>
-                    </div>
-                  )}
-                </div>
-                <div
-                  className="flex items-center justify-between"
-                  style={{
-                    padding: "16px 20px",
-                    borderTop: "1px solid var(--color-border)",
-                  }}
-                >
-                  <div className="flex flex-col gap-[2px]">
-                    <span
-                      className="text-[15px] font-medium"
-                      style={{
-                        fontFamily: "var(--font-display)",
-                        color: "var(--color-text)",
-                      }}
-                    >
-                      {projects[0].title}
-                    </span>
-                    <span
-                      className="text-[12px]"
-                      style={{ color: "var(--color-muted)" }}
-                    >
-                      {projects[0].subtitle}
-                    </span>
-                  </div>
-                  <span
-                    className="text-[13px] transition-colors duration-200"
-                    style={{ color: "var(--color-accent)" }}
-                  >
-                    View →
-                  </span>
-                </div>
-              </a>
-
-              {/* Bottom row — two small cards  
-              <div className="grid grid-cols-2 gap-[12px]">
-                {projects.slice(1, 3).map((project) => (
-                  <a
-                    key={project.id}
-                    href={project.caseStudyHref}
-                    className="no-underline block overflow-hidden group"
-                    style={{
-                      border: "1px solid var(--color-border)",
-                      backgroundColor: "var(--color-surface)",
-                    }}
-                  >
-                    <div
-                      className="w-full overflow-hidden"
-                      style={{ aspectRatio: "16/9" }}
-                    >
-                      {project.imageSrc ? (
-                        <Image
-                          src={project.imageSrc}
-                          alt={project.imageAlt}
-                          width={300}
-                          height={169}
-                          loading="eager"
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                        />
-                      ) : (
-                        <div className="w-full h-full flex items-center justify-center">
-                          <span
-                            className="label-text"
-                            style={{ fontSize: "11px" }}
-                          >
-                            {project.title}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                    <div
-                      className="flex items-center justify-between"
-                      style={{
-                        padding: "12px 16px",
-                        borderTop: "1px solid var(--color-border)",
-                      }}
-                    >
-                      <span
-                        className="text-[13px] font-medium"
-                        style={{
-                          fontFamily: "var(--font-display)",
-                          color: "var(--color-text)",
-                        }}
-                      >
-                        {project.title}
-                      </span>
-                      <span
-                        className="text-[12px]"
-                        style={{ color: "var(--color-accent)" }}
-                      >
-                        →
-                      </span>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div> */}
-
-      {/* Right — illustration 
-            <div className="hidden md:flex items-center justify-center relative">
-              {/* Background circle 
-              <div
-                className="absolute rounded-full"
-                style={{
-                  width: "420px",
-                  height: "420px",
-                  backgroundColor: "var(--color-surface)",
-                  border: "1px solid var(--color-border)",
-                  zIndex: 0,
-                }}
-              />
-
-              {/* Illustration 
-              <div style={{ position: "relative", zIndex: 1 }}>
-                <Image
-                  src="/images/hero-illustration02.svg"
-                  alt="Full-stack web and mobile developer"
-                  width={480}
-                  height={480}
-                  className="w-full h-auto"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       <section style={{ paddingBlock: "96px" }}>
         <div className="content-wrapper hero-content">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-[64px] items-center">
@@ -273,11 +61,11 @@ export default function Home() {
                 className="h1 animate-fade-up animate-fade-up-1"
                 style={{ marginBottom: "24px" }}
               >
-                I build web and mobile apps{" "}
+                Phone not ringing? Your website is{" "}
                 <span
                   style={{ color: "var(--color-accent)", fontStyle: "italic" }}
                 >
-                  that work.
+                  losing you boiler jobs.
                 </span>
               </h1>
 
@@ -289,8 +77,8 @@ export default function Home() {
                   marginBottom: "40px",
                 }}
               >
-                Full-stack development for startups and growing businesses —
-                React, Node.js, and Flutter.
+                I build fast websites for UK heating engineers that turn
+                visitors into real enquiries.
               </p>
 
               <div
@@ -298,10 +86,10 @@ export default function Home() {
                 style={{ marginBottom: "48px" }}
               >
                 <Button href="/work" variant="filled">
-                  See My Work
+                  See Real Trade Sites
                 </Button>
                 <Button href="/contact" variant="ghost">
-                  Get In Touch
+                  Get More Enquiries
                 </Button>
               </div>
 
@@ -314,7 +102,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right — illustration */}
             {/* Right — illustration */}
             <div className="hidden md:flex items-center justify-center relative">
               {/* Accent shadow circle */}
@@ -351,10 +138,20 @@ export default function Home() {
       >
         <div className="content-wrapper">
           <SectionLabel>Selected Work</SectionLabel>
-          <h2 className="h2" style={{ marginBottom: "64px" }}>
-            Projects that solve real problems
-          </h2>
 
+          <div style={{ marginBottom: "64px" }}>
+            <h2 className="h2">Real sites built for real trades</h2>
+            <p
+              className="body-text  "
+              style={{
+                fontSize: "18px",
+                lineHeight: "28px",
+              }}
+            >
+              Sites scoring 98/100 on mobile speed. Built for UK service
+              businesses.
+            </p>
+          </div>
           <div
             className="grid grid-cols-1 md:grid-cols-2 gap-4"
             style={{ marginBottom: "48px" }}
@@ -385,7 +182,7 @@ export default function Home() {
         <div className="content-wrapper">
           <SectionLabel>What I Do</SectionLabel>
           <h2 className="h2" style={{ marginBottom: "64px" }}>
-            How I can help your business
+            How you get more jobs without platforms
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -409,14 +206,14 @@ export default function Home() {
             <div>
               <SectionLabel>About</SectionLabel>
               <h2 className="h2" style={{ marginBottom: "24px" }}>
-                A developer who cares about the work.
+                Not an agency. No contracts. No nonsense.
               </h2>
               <p className="body-text" style={{ fontSize: "16px" }}>
-                I'm Fasih Ahmad Khan, a full-stack developer based in Pakistan,
-                building web and mobile products for clients in the US, UK, and
-                beyond. I care about writing clean code, meeting deadlines, and
-                making sure what I build actually solves the problem it was
-                built for.
+                I build websites for small service businesses that are tired of
+                fake leads and monthly fees. You won’t get jargon or long calls.
+                You get a site that works, delivered on time, and built to bring
+                in real jobs. Based in Pakistan. Working with UK clients. Clear
+                communication. No chasing needed.
               </p>
               <div style={{ marginTop: "32px" }}>
                 <Button href="/about" variant="ghost">
@@ -427,8 +224,10 @@ export default function Home() {
 
             {/* Right — stats */}
             <div
-              className="grid grid-cols-2 gap-px"
-              style={{ border: "1px solid var(--color-muted)" }}
+              className="grid grid-cols-2 gap-px self-center"
+              style={{
+                border: "1px solid var(--color-muted)",
+              }}
             >
               {stats.map((stat) => (
                 <div
@@ -465,7 +264,7 @@ export default function Home() {
         <div className="content-wrapper">
           <SectionLabel>Kind Words</SectionLabel>
           <h2 className="h2" style={{ marginBottom: "64px" }}>
-            What clients say
+            Proof it works
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px]">
@@ -487,9 +286,9 @@ export default function Home() {
         <div className="content-wrapper flex flex-col items-center text-center gap-3">
           <h2
             className="h2"
-            style={{ color: "var(--color-bg)", maxWidth: "560px" }}
+            style={{ color: "var(--color-bg)", maxWidth: "740px" }}
           >
-            Have a project in mind?
+            How many jobs did you miss this week?
           </h2>
 
           <p
@@ -499,14 +298,15 @@ export default function Home() {
               lineHeight: "24px",
               color: "var(--color-bg)",
               opacity: 0.85,
-              maxWidth: "440px",
+              maxWidth: "520px",
             }}
           >
-            Let's talk about what you need. No commitment, just a conversation.
+            If your phone isn’t ringing, something is broken. This fixes it.
+            Simple.
           </p>
 
           <Button href="/contact" variant="white">
-            Book a Free Call
+            Get My Site Built
           </Button>
         </div>
       </section>

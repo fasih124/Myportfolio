@@ -10,41 +10,41 @@ export const metadata = {
 const services = [
   {
     icon: Monitor,
-    title: "Web Application Development",
+    title: "The 10-Day HVAC Lead Engine",
     description:
-      "I build custom web applications and SaaS platforms using React on the frontend and Node.js with Express on the backend. Whether you need a customer-facing product or an internal tool, I handle the full stack from database design to deployment.",
+      "A complete website built to bring in real enquiries, not just look good. Designed specifically for UK heating engineers.",
     deliverables: [
-      "Responsive React frontend with clean UI",
-      "REST API built with Node.js and Express",
-      "MongoDB database design and integration",
-      "User authentication and role-based access",
-      "Deployment to a live server with a custom domain",
+      "Loads under 2 seconds on mobile",
+      "Built to capture calls and enquiries",
+      "Designed for boiler and heat pump work",
+      "Ready in 10 days",
+      "No monthly fees",
     ],
   },
   {
     icon: Smartphone,
-    title: "Mobile App Development",
+    title: "24/7 Lead Capture System",
     description:
-      "I build Flutter mobile apps for Android that feel native, load fast, and work reliably. I use a clean feature-first architecture with Riverpod for state management — making the codebase easy to maintain and extend as your product grows.",
+      "Customers send their details straight to you while you're on the job. No missed opportunities.",
     deliverables: [
-      "Flutter app for Android (iOS on request)",
-      "Clean feature-first project architecture",
-      "Offline-first storage with Isar or SQLite",
-      "State management with Riverpod",
-      "App Store submission guidance",
+      "Name, phone, postcode captured",
+      "Instant email notification",
+      "Works all day while you're working",
+      "No shared leads",
+      "Direct contact only",
     ],
   },
   {
     icon: LayoutDashboard,
-    title: "Business Tools & Dashboards",
+    title: "Speed That Wins Jobs",
     description:
-      "I build internal tools, admin panels, and management dashboards that help businesses run more efficiently. These are purpose-built for your workflow — not off-the-shelf software adapted to fit — so they do exactly what you need and nothing you don't.",
+      "When a boiler breaks, the fastest site gets the call. This makes sure it's yours.",
     deliverables: [
-      "Custom admin panel or internal dashboard",
-      "Data tables, filters, and export features",
-      "Role-based access for different team members",
-      "Integration with existing systems or APIs",
-      "Clean, fast UI your team will actually use",
+      "90+ PageSpeed guaranteed",
+      "Faster than most competitors",
+      "Better Google ranking potential",
+      "Mobile-first build",
+      "Under 3 second load time",
     ],
   },
 ];
@@ -52,73 +52,56 @@ const services = [
 const packages = [
   {
     name: "Starter",
-    price: "$300 – $600",
+    price: "£1,197",
     description:
-      "Best for small projects, MVPs, or simple tools with a defined scope.",
+      "Complete website built to bring in enquiries and replace paid leads.",
     features: [
-      "Single-feature web or mobile app",
-      "Up to 5 screens or pages",
-      "Basic authentication",
-      "1 round of revisions",
-      "2 weeks delivery",
+      "Full HVAC website",
+      "Under 2s mobile speed",
+      "Lead capture form",
+      "£7,500 grant section",
+      "30 days free changes",
+      "You own everything",
     ],
     cta: "Get Started",
     highlighted: false,
   },
   {
     name: "Standard",
-    price: "$800 – $2,000",
+    price: "£1,597",
     description:
-      "Best for full-featured apps and business tools with multiple roles or flows.",
+      "Everything in Starter plus tools to turn enquiries into booked jobs.",
     features: [
-      "Full-stack web or Flutter mobile app",
-      "Up to 15 screens or pages",
-      "Role-based authentication",
-      "Admin dashboard or management panel",
-      "2 rounds of revisions",
-      "4–6 weeks delivery",
+      "Everything in Starter",
+      "What to say on the phone script",
+      "Fast-start enquiry plan",
+      "Review collection guide",
+      "60 days free changes",
     ],
     cta: "Most Popular",
     highlighted: true,
-  },
-  {
-    name: "Premium",
-    price: "$2,500+",
-    description:
-      "Best for complex platforms, SaaS products, or ongoing development work.",
-    features: [
-      "Complex multi-role web or mobile platform",
-      "Unlimited screens and features",
-      "Third-party API integrations",
-      "DevOps setup and CI/CD pipeline",
-      "Ongoing support after delivery",
-      "Flexible timeline based on scope",
-    ],
-    cta: "Let's Talk",
-    highlighted: false,
   },
 ];
 
 const faqs = [
   {
-    question: "How does the process work?",
+    question: "I already tried Checkatrade. Why is this different?",
     answer:
-      "We start with a free discovery call where I learn about your project, goals, and timeline. From there I send a written proposal with scope, cost, and delivery estimate. Once agreed, I work in milestones — sharing progress at each stage so you're never in the dark. Final delivery includes a handoff call and documentation.",
+      "Those platforms sell the same lead to multiple engineers. This gives you your own website and your own enquiries. No sharing.",
   },
   {
-    question: "Do you work with clients outside Pakistan?",
+    question: "How do I know this will get me work?",
     answer:
-      "Yes — most of my clients are based in the US, UK, and Australia. I work async over email and Slack, and schedule calls to fit your timezone. Payments are accepted via Wise, PayPal, or direct bank transfer in USD, GBP, or AUD.",
+      "Faster sites get more calls. Most HVAC sites are slow. This fixes that and captures enquiries directly.",
   },
   {
-    question: "What do you need from me to get started?",
+    question: "I already have a website",
     answer:
-      "A clear description of what you want to build, who it's for, and any reference apps or designs you like. You don't need a full spec — we can work through the details together. The more context you can share upfront, the more accurate my proposal will be.",
+      "If it’s slow or not bringing enquiries, it’s costing you jobs. This replaces it with one that works.",
   },
   {
-    question: "Do you offer ongoing support after delivery?",
-    answer:
-      "Yes. Every project includes a 2-week support window after delivery for bug fixes at no extra cost. For longer-term support, maintenance retainers are available on the Premium tier or as a separate agreement.",
+    question: "Do I need technical knowledge?",
+    answer: "No. Everything is handled for you. You just receive enquiries.",
   },
 ];
 
@@ -137,14 +120,14 @@ export default function ServicesPage() {
                 className="h1"
                 style={{ maxWidth: "640px", marginBottom: "24px" }}
               >
-                What I build
+                Stop paying for leads you don’t own.
               </h1>
               <p
                 className="body-text"
                 style={{ fontSize: "18px", maxWidth: "520px" }}
               >
-                Full-stack web and mobile development for startups and growing
-                businesses. Scoped clearly, delivered on time.
+                A complete website built for UK heating engineers to get direct
+                enquiries without Checkatrade or Bark.
               </p>
             </div>
 
@@ -237,23 +220,24 @@ export default function ServicesPage() {
 
       {/* ── Pricing ─────────────────────────────────────────── */}
       <section
-        className="section-padding"
+        className="section-padding "
         style={{ backgroundColor: "var(--color-surface)" }}
       >
-        <div className="content-wrapper">
+        <div className="content-wrapper text-center">
           <SectionLabel>Pricing</SectionLabel>
-          <h2 className="h2" style={{ marginBottom: "16px" }}>
-            Simple, honest pricing
+          <h2 className="h2 text-center" style={{ marginBottom: "16px" }}>
+            One job pays for this
           </h2>
           <p
-            className="body-text"
-            style={{ marginBottom: "64px", maxWidth: "480px" }}
+            className="body-text m-auto"
+            style={{ marginBottom: "64px", maxWidth: "680px" }}
           >
-            Every project is quoted based on scope. These ranges give you a
-            starting point before we talk.
+            <span className="px-2 ">One boiler repair = ~£250</span>
+            <span className="px-2">One install = £2,500+ </span>
+            <span className="px-2">This pays for itself fast.</span>
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-[24px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
             {packages.map((pkg) => (
               <div
                 key={pkg.name}
@@ -376,7 +360,7 @@ export default function ServicesPage() {
             className="h2"
             style={{ color: "var(--color-bg)", maxWidth: "480px" }}
           >
-            Ready to get started?
+            How many jobs did you miss last month?
           </h2>
           <p
             style={{
@@ -388,13 +372,10 @@ export default function ServicesPage() {
               maxWidth: "400px",
             }}
           >
-            Tell me about your project and I'll get back to you within 24 hours.
+            If your phone isn’t ringing, this fixes it.
           </p>
-          <Button
-            href="/https://calendly.com/fasih-ahmad/discovery-call"
-            variant="white"
-          >
-            Book a Free Call
+          <Button href="/contact" variant="white">
+            Get My Site Built
           </Button>
         </div>
       </section>

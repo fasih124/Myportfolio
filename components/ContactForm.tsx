@@ -6,16 +6,18 @@ import Button from "@/components/Button";
 type FormState = {
   name: string;
   email: string;
-  projectType: string;
-  description: string;
+  phone: string;
+  area: string;
+  service: string;
 };
 
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>({
     name: "",
     email: "",
-    projectType: "",
-    description: "",
+    phone: "",
+    area: "",
+    service: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -32,8 +34,8 @@ export default function ContactForm() {
 
   async function handleSubmit(e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
-    if (!form.name || !form.email || !form.description) {
-      setError("Please fill in your name, email, and project description.");
+    if (!form.name || !form.email || !form.area) {
+      setError("Please add your name, phone, and area.");
       return;
     }
     setLoading(true);
@@ -69,15 +71,15 @@ export default function ContactForm() {
         >
           ✓
         </span>
-        <h2 className="h3">Message received.</h2>
+        <h2 className="h3">Got it. I’ll take a look.</h2>
         <p className="body-text">
-          Thanks for reaching out. I'll read your message and get back to you
-          within 24 hours.
+          I’ll check your details and reply within 24 hours. If this can work
+          for you, I’ll tell you straight.
         </p>
         <button
           onClick={() => {
             setSubmitted(false);
-            setForm({ name: "", email: "", projectType: "", description: "" });
+            setForm({ name: "", email: "", area: "", phone: "", service: "" });
           }}
           className="text-[14px] text-[var(--color-accent)] hover-accent cursor-pointer"
           style={{ background: "none", border: "none" }}
@@ -89,8 +91,11 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="flex flex-col gap-[40px]">
+    <div className="flex flex-col gap-[30px]">
       <div className="flex flex-col">
+        <p className="body-text" style={{ marginBottom: "18px" }}>
+          Takes 30 seconds. I’ll reply within 24 hours.
+        </p>
         <label htmlFor="name" className="form-label">
           Name
         </label>
@@ -98,7 +103,7 @@ export default function ContactForm() {
           id="name"
           name="name"
           type="text"
-          placeholder="Your name"
+          placeholder="John"
           value={form.name}
           onChange={handleChange}
           className="form-input"
@@ -121,43 +126,52 @@ export default function ContactForm() {
           autoComplete="email"
         />
       </div>
-
       <div className="flex flex-col">
-        <label htmlFor="projectType" className="form-label">
-          Project Type
+        <label htmlFor="phone" className="form-label">
+          Phone number
+        </label>
+
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          placeholder="07XXXXXXXXX"
+          value={form.phone}
+          onChange={handleChange}
+          className="form-input"
+        />
+      </div>
+      <div className="flex flex-col">
+        <label htmlFor="area" className="form-label">
+          Area you cover
+        </label>
+        <input
+          id="area"
+          name="area"
+          type="text"
+          placeholder="e.g. Manchester"
+          value={form.area}
+          onChange={handleChange}
+          className="form-input"
+        />
+      </div>
+      <div className="flex flex-col">
+        <label htmlFor="service" className="form-label">
+          Main service
         </label>
         <select
-          id="projectType"
-          name="projectType"
-          value={form.projectType}
+          id="service"
+          name="service"
+          value={form.service}
           onChange={handleChange}
           className="form-input"
-          style={{ cursor: "pointer" }}
         >
-          <option value="" disabled>
-            Select an option
-          </option>
-          <option value="web">Web App</option>
-          <option value="mobile">Mobile App</option>
-          <option value="both">Both</option>
-          <option value="unsure">Not sure yet</option>
+          <option value="">Select</option>
+          <option value="boiler-repair">Boiler repair</option>
+          <option value="boiler-install">Boiler installation</option>
+          <option value="heat-pump">Heat pump installation</option>
+          <option value="all">All services</option>
         </select>
-      </div>
-
-      <div className="flex flex-col">
-        <label htmlFor="description" className="form-label">
-          Brief Description
-        </label>
-        <textarea
-          id="description"
-          name="description"
-          placeholder="Tell me what you're trying to build..."
-          value={form.description}
-          onChange={handleChange}
-          rows={5}
-          className="form-input"
-          style={{ resize: "vertical" }}
-        />
       </div>
 
       {error && (
@@ -173,18 +187,21 @@ export default function ContactForm() {
           onClick={handleSubmit}
           className="w-full justify-center"
         >
-          {loading ? "Sending..." : "Send Message"}
+          {loading ? "Sending..." : "Get More Enquiries"}
         </Button>
         <p className="text-[13px]" style={{ color: "var(--color-muted)" }}>
-          Prefer a call?{" "}
+          Prefer a quick call?{" "}
           <a
             href="https://calendly.com/knightsaleem"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--color-accent)] hover-accent no-underline"
           >
-            Book a free 30-min discovery call →
+            Book here →
           </a>
+        </p>
+        <p className="text-[13px]" style={{ color: "var(--color-muted)" }}>
+          No spam. No pressure. Straight answer.
         </p>
       </div>
     </div>
