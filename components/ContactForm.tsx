@@ -189,17 +189,7 @@ export default function ContactForm() {
         >
           {loading ? "Sending..." : "Get More Enquiries"}
         </Button>
-        <p className="text-[13px]" style={{ color: "var(--color-muted)" }}>
-          Prefer a quick call?{" "}
-          <a
-            href="https://calendly.com/knightsaleem"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[var(--color-accent)] hover-accent no-underline"
-          >
-            Book here →
-          </a>
-        </p>
+
         <p className="text-[13px]" style={{ color: "var(--color-muted)" }}>
           No spam. No pressure. Straight answer.
         </p>

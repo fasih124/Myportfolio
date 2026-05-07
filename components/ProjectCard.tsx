@@ -64,8 +64,7 @@ export default function ProjectCard({
           className="inline-flex items-center gap-1 text-small font-medium text-accent hover-accent mt-1 w-fit"
           style={{ transition: "gap 200ms ease" }}
         >
-          View Case Study
-          <span aria-hidden="true">→</span>
+          See Breakdown <span aria-hidden="true">→</span>
         </a>
       </div>
     </article>

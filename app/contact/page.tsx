@@ -23,12 +23,6 @@ const contactLinks = [
     value: "linkedin.com/in/FasihAhmadKhan",
     href: "https://www.linkedin.com/in/dev-fasih-ahmad-khan/",
   },
-  {
-    icon: Calendar,
-    label: "Book a quick call",
-    value: "calendly.com/fasihAhmadKhan",
-    href: "https://calendly.com/fasih-ahmad/discovery-call",
-  },
 ];
 
 export default function ContactPage() {

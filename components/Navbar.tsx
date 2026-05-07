@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Button from "./Button";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -60,7 +61,16 @@ export default function Navbar() {
               color: scrolled ? "var(--color-accent)" : "var(--color-text)",
             }}
           >
-            Fasih Ahmad Khan
+            <div className="flex flex-row gap-2 justify-center align-middle items-center">
+              <Image
+                src="/images/logo.png"
+                alt="logo"
+                width={50}
+                height={50}
+                priority
+              />
+              <span>Fasih Ahmad Khan</span>
+            </div>
           </a>
 
           {/* Desktop nav */}

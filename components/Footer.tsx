@@ -74,7 +74,8 @@ export default function Footer() {
             {/* Availability badge */}
             <div className="flex items-center   mt-0.5">
               <Button
-                href="https://calendly.com/fasih-ahmad/discovery-call"
+                // href="https://calendly.com/fasih-ahmad/discovery-call"
+                href="/contact"
                 variant="ghost"
               >
                 Book a Free Call
