@@ -344,8 +344,8 @@ export default function HVACLandingPage() {
           HERO
           Light bg — big Fraunces — terracotta on key phrase
       ================================================ */}
-      <section className="min-h-screen flex items-center justify-center px-4 py-28">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+      <section className="min-h-screen flex items-center justify-center px-4 py-11">
+        <div className="max-w-4xl mx-auto text-center space-y-2">
           {/* Headline */}
           <div className="animate-fade-up animate-fade-up-2">
             <h1 className="h1">
@@ -371,7 +371,7 @@ export default function HVACLandingPage() {
           {/* Story */}
           <div className="animate-fade-up animate-fade-up-3">
             <p
-              className="body-text max-w-2xl mx-auto"
+              className="body-text max-w-3xl mx-auto"
               style={{ fontSize: "1.125rem", lineHeight: "1.75rem" }}
             >
               A homeowner's boiler breaks at 10pm in December. She searches on
@@ -387,7 +387,7 @@ export default function HVACLandingPage() {
           <div className="animate-fade-up animate-fade-up-4 flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <a
               href="#pricing"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-semibold rounded-xl text-lg transition-opacity hover:opacity-90"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2 text-white font-semibold rounded-xl text-lg transition-opacity hover:opacity-90"
               style={{ backgroundColor: "var(--color-accent)" }}
             >
               Get Your Site Built
@@ -395,9 +395,8 @@ export default function HVACLandingPage() {
             </a>
             <a
               href="#proof"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 font-medium rounded-xl text-lg transition-colors border"
+              className="inline-flex items-center border-gray-600 justify-center gap-2 px-6 py-2 font-medium rounded-xl text-lg transition-colors border"
               style={{
-                borderColor: "var(--color-border)",
                 color: "var(--color-text)",
                 backgroundColor: "transparent",
               }}
@@ -408,7 +407,7 @@ export default function HVACLandingPage() {
 
           {/* Reassurances */}
           <ul
-            className="flex flex-wrap justify-center gap-x-6 gap-y-2 pt-2 text-sm"
+            className="flex flex-wrap justify-center gap-x-3 gap-y-2 pt-2 text-sm"
             style={{ color: "var(--color-muted)" }}
           >
             {[
@@ -417,7 +416,7 @@ export default function HVACLandingPage() {
               "You own it permanently",
               "98/100 PageSpeed guaranteed",
             ].map((item) => (
-              <li key={item} className="flex items-center gap-1.5">
+              <li key={item} className="flex items-center gap-1">
                 <CheckCircle2
                   className="w-4 h-4 shrink-0"
                   style={{ color: "#059669" }}

@@ -93,8 +93,8 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <Button href="/contact" variant="ghost">
-              Get Your Site Built
+            <Button href="/hvac" variant="ghost">
+              HVAC Offer
             </Button>
           </nav>
 
