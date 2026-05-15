@@ -167,8 +167,8 @@ export default function Navbar() {
               </a>
             ))}
             <div style={{ marginTop: "32px" }}>
-              <Button href="/contact" variant="filled">
-                Let's Talk
+              <Button href="/hvac" variant="filled">
+                  HVAC Offer
               </Button>
             </div>
           </nav>
