@@ -19,6 +19,11 @@ import {
 // ============================================================
 // TYPES
 // ============================================================
+interface CalcResult {
+  monthly: number;
+  yearly: number;
+  breakEvenDays: number;
+}
 
 interface BundleItem {
   name: string;
@@ -92,7 +97,7 @@ const STARTER_ITEMS: BundleItem[] = [
   {
     name: "The 24/7 Never-Miss Lead Capture",
     desc: "Contact form with instant email alert. You know about every enquiry within seconds, even on a job",
-    value: 300,
+    value: 350,
   },
   {
     name: "The £7,500 Grant Job Magnet",
@@ -102,17 +107,17 @@ const STARTER_ITEMS: BundleItem[] = [
   {
     name: "The Instant Customer Trust Blueprint",
     desc: "Gas Safe badge, registration number, years trading, and job count — positioned where it changes minds",
-    value: 150,
+    value: 250,
   },
   {
     name: "The Rank-Higher Speed Guarantee",
-    desc: "90+ PageSpeed score on mobile guaranteed or we rebuild at no charge. Verified before launch day.",
+    desc: "90+ PageSpeed score on mobile guaranteed or I rebuild at no charge. Verified before launch day.",
     value: 500,
   },
   {
     name: "The 10-Day Live Before Winter Promise",
-    desc: "Fixed build schedule with exact dates confirmed before we start. Day 1 to Day 10 mapped out.",
-    value: 400,
+    desc: "Fixed build schedule with exact dates confirmed before I start. Day 1 to Day 10 mapped out.",
+    value: 100,
   },
   {
     name: "The Own-It-Forever No-Fee Transfer",
@@ -127,7 +132,32 @@ const STARTER_ITEMS: BundleItem[] = [
   {
     name: "The 30-Day No-Surprises Change Promise",
     desc: "Any reasonable change made within 48 hours. No charge. No questions. Starter: 30 days.",
-    value: 300,
+    value: 350,
+  },
+  {
+    name: "The One-Tap Call Button",
+    desc: "A sticky button at the bottom of every mobile screen. One tap calls the engineer directly.",
+    value: 150,
+  },
+  {
+    name: "The WhatsApp Enquiry Button",
+    desc: "- A floating WhatsApp button with a pre-written opening message. UK homeowners increasingly message before calling.",
+    value: 150,
+  },
+  {
+    name: "The 5-Star Review Funnel Page",
+    desc: "A dedicated page at /review that routes satisfied customers straight to your Google review form in one click. This is what the QR card links to.",
+    value: 200,
+  },
+  {
+    name: "The Local Directory Consistency Check",
+    desc: "Your business name, address, and phone number audited across Google, Yell, Checkatrade, Thomson Local, and Bing Places",
+    value: 200,
+  },
+  {
+    name: "The Google Business Profile (GBP) Audit",
+    desc: "A written report on your GBP, missing categories, weak description and many more, Delivered after launch with the exact fixes needed",
+    value: 200,
   },
 ];
 
@@ -145,17 +175,27 @@ const STANDARD_EXTRAS: BundleItem[] = [
   {
     name: "The 2-Minute Proof It's Working Dashboard",
     desc: "Check your Google traffic in 2 minutes once a week. One number. Zero technical knowledge needed.",
-    value: 200,
+    value: 150,
   },
   {
     name: "The 2-Week 10-Review Fast Track",
     desc: "Get your first 10 Google reviews from past customers using one copy-paste WhatsApp message.",
-    value: 100,
+    value: 150,
+  },
+  {
+    name: "The 3-Competitor Knockout Report",
+    desc: "Before I build your site I audit your top 3 local competitors and Your site is then built to out-position all three on every measurable factor.",
+    value: 350,
+  },
+  {
+    name: "The Leave-a-Review QR Card",
+    desc: "A print-ready card you hand to customers immediately after every completed job, Scans straight to your review funnel page.",
+    value: 150,
   },
   {
     name: "The 60-Day No-Surprises Change Promise",
     desc: "Double the amendment window. 60 full days to request any changes at no charge.",
-    value: 500,
+    value: 600,
   },
 ];
 
@@ -164,19 +204,19 @@ const HOW_IT_WORKS: Step[] = [
     step: "01",
     day: "Today",
     title: "Pay and complete your 15-minute briefing form",
-    desc: "On your phone between jobs. Business name, services, coverage area. Photos if you have them. That is everything we need to start.",
+    desc: "On your phone between jobs. Business name, services, coverage area. Photos if you have them. That is everything I need to start.",
   },
   {
     step: "02",
     day: "Day 8",
     title: "Review your preview on your phone",
-    desc: "We send a live Vercel preview link. Check 5 things. Reply with anything to change in plain English. Changes completed within 24 hours.",
+    desc: "I send a live Vercel preview link. Check 5 things. Reply with anything to change in plain English. Changes completed within 24 hours.",
   },
   {
     step: "03",
     day: "Day 10",
     title: "Your site goes live on your domain",
-    desc: "DNS connected, Search Console live, sitemap submitted. Every item on our 30-point checklist verified before you are told it is live.",
+    desc: "DNS connected, Search Console live, sitemap submitted. Every item on my 30-point checklist verified before you are told it is live.",
   },
 ];
 
@@ -185,7 +225,7 @@ const GUARANTEES: Guarantee[] = [
     icon: Zap,
     title: "Speed Guarantee",
     badge: "Verified before launch",
-    desc: "90+ PageSpeed score on mobile — checked and confirmed before we tell you the site is live. If it ever drops below, we fix it at no charge.",
+    desc: "90+ PageSpeed score on mobile — checked and confirmed before I tell you the site is live. If it ever drops below, I fix it at no charge.",
   },
   {
     icon: Shield,
@@ -204,27 +244,27 @@ const GUARANTEES: Guarantee[] = [
 const FAQS: FAQ[] = [
   {
     q: "I tried a website before and got absolutely nothing from it.",
-    a: "Most HVAC websites fail for three reasons: they load in 5+ seconds on mobile, they have no local SEO signals, and there is no clear call-to-action. Our sites load under 1.5 seconds, are built with Gas Safe keywords and local area targeting, and have a click-to-call button in every section. The PageSpeed score alone puts you above 90% of local competitors. We also submit your sitemap to Google on launch day — most developers never do this.",
+    a: "Most HVAC websites fail for three reasons: they load in 5+ seconds on mobile, they have no local SEO signals, and there is no clear call-to-action. My sites load under 1.5 seconds, are built with Gas Safe keywords and local area targeting, and have a click-to-call button in every section. The PageSpeed score alone puts you above 90% of local competitors. I also submit your sitemap to Google on launch day — most developers never do this.",
   },
   {
     q: "How do I know this will actually bring me calls?",
-    a: "We guarantee the technical foundation — speed, local SEO structure, and form functionality. What we cannot guarantee is the exact number of calls because that depends on your area, your competition, and how quickly Google indexes the site. Engineers who complete the three fast-start actions on launch day typically see first enquiries within 1 to 3 weeks.",
+    a: "I guarantee the technical foundation — speed, local SEO structure, and form functionality. What I cannot guarantee is the exact number of calls because that depends on your area, your competition, and how quickly Google indexes the site. Engineers who complete the three fast-start actions on launch day typically see first enquiries within 1 to 3 weeks.",
   },
   {
     q: "What happens after my amendment period ends?",
-    a: "Changes are available at fixed prices you always know upfront. Small text change: £30. Image replacement: £30. New service added to existing page: £75. New page built: £150. You are always told the cost before any work starts. No surprise invoices. Ever. Or take our Monthly Care Plan at £99/month for unlimited small changes plus a monthly Google traffic summary.",
+    a: "Changes are available at fixed prices you always know upfront. Small text change: £30. Image replacement: £30. New service added to existing page: £75. New page built: £150. You are always told the cost before any work starts. No surprise invoices. Ever. Or take My Monthly Care Plan at £99/month for unlimited small changes plus a monthly Google traffic summary.",
   },
   {
     q: "Do I need to be available for calls or video meetings?",
-    a: "No. The entire project runs over WhatsApp and email. The briefing form takes 15 minutes on your phone. The Day 8 preview review takes 10 minutes on your phone. Your total time between payment and launch day is under one hour. We handle everything in between.",
+    a: "No. The entire project runs over WhatsApp and email. The briefing form takes 15 minutes on your phone. The Day 8 preview review takes 10 minutes on your phone. Your total time between payment and launch day is under one hour. I handle everything in between.",
   },
   {
     q: "What if I already have a website?",
-    a: "Your current site stays live until the new one is approved by you. We never take anything down without your sign-off. If you already have a domain, we connect the new site to it on Day 10. If you are on Wix, Squarespace, or a similar platform, we move you to a faster, permanently owned solution without you losing your domain name.",
+    a: "Your current site stays live until the new one is approved by you. I never take anything down without your sign-off. If you already have a domain, I connect the new site to it on Day 10. If you are on Wix, Squarespace, or a similar platform, I move you to a faster, permanently owned solution without you losing your domain name.",
   },
   {
     q: "I am not MCS certified — can I still have the heat pump section?",
-    a: "Yes. The heat pump section explains the Boiler Upgrade Scheme grant in general terms and attracts homeowners researching it — even if you do not install heat pumps yourself. Many engineers refer these enquiries to an MCS-certified partner and earn a referral fee. If you become MCS certified later, we update the section within your amendment period at no charge.",
+    a: "Yes. The heat pump section explains the Boiler Upgrade Scheme grant in general terms and attracts homeowners researching it — even if you do not install heat pumps yourself. Many engineers refer these enquiries to an MCS-certified partner and earn a referral fee. If you become MCS certified later, I update the section within your amendment period at no charge.",
   },
 ];
 
@@ -278,7 +318,7 @@ function BundleRow({
 }) {
   return (
     <div
-      className="flex items-start gap-4 p-4 rounded-xl border transition-colors"
+      className="flex flex-col sm:flex-row items-start gap-3 md:gap-4 p-3 md:p-4 rounded-xl border transition-colors "
       style={{
         backgroundColor: highlight ? "#FDF5F2" : "white",
         borderColor: highlight ? "#D4795E" : "var(--color-border)",
@@ -290,20 +330,20 @@ function BundleRow({
       />
       <div className="flex-1 min-w-0">
         <p
-          className="font-semibold text-sm leading-snug"
+          className="font-semibold text-sm leading-snug  text-wrap"
           style={{ color: "var(--color-text)" }}
         >
           {item.name}
         </p>
         <p
-          className="text-sm mt-0.5 leading-relaxed"
+          className="text-sm mt-0.5 leading-relaxed  text-wrap"
           style={{ color: "var(--color-muted)" }}
         >
           {item.desc}
         </p>
       </div>
       <span
-        className="text-sm font-medium shrink-0 whitespace-nowrap"
+        className=" sm:block text-sm font-medium shrink-0 whitespace-nowrap"
         style={{
           color: highlight ? "var(--color-accent)" : "var(--color-muted)",
         }}
@@ -311,6 +351,673 @@ function BundleRow({
         £{item.value.toLocaleString()}
       </span>
     </div>
+  );
+}
+
+// ============================================================
+// LEAD MAGNET 1 — WEBSITE SCORECARD
+// ============================================================
+function ScorecardSection() {
+  const [formData, setFormData] = useState({ name: "", email: "", website: "" });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await fetch("https://formspree.io/f/mjgqkwod", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          website: formData.website,
+          _subject: `HVAC Scorecard Request — ${formData.name}`,
+        }),
+      });
+      setSubmitted(true);
+    } catch {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <section
+      className="py-12 px-4"
+      style={{
+        backgroundColor: "#FDF5F2",
+        borderTop: "1px solid #D4795E",
+        borderBottom: "1px solid #D4795E",
+      }}
+    >
+      <div className="max-w-3xl mx-auto">
+        {!submitted ? (
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Left — copy */}
+            <div>
+              <p
+                className="label-text mb-2"
+                style={{ color: "var(--color-accent)" }}
+              >
+                FREE DOWNLOAD
+              </p>
+              <h3
+                className="text-2xl font-bold mb-3"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  color: "var(--color-text)",
+                }}
+              >
+                Is Your Website Losing You Jobs?
+              </h3>
+              <p
+                className="text-sm leading-relaxed mb-4"
+                style={{ color: "var(--color-muted)" }}
+              >
+                The HVAC Website Scorecard — 10 questions that take 2 minutes
+                to answer. Most HVAC sites score 3 out of 10. Find out where
+                yours stands before your next competitor does.
+              </p>
+              <ul className="space-y-2">
+                {[
+                  "Takes 2 minutes — no login needed",
+                  "Shows exactly where you are losing calls",
+                  "Free — no strings attached",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-2 text-sm"
+                    style={{ color: "var(--color-muted)" }}
+                  >
+                    <CheckCircle2
+                      className="w-4 h-4 shrink-0"
+                      style={{ color: "#059669" }}
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Right — form */}
+            <form onSubmit={handleSubmit} className="space-y-3">
+              <div>
+                <label
+                  className="block text-xs font-medium mb-1"
+                  style={{ color: "var(--color-text)" }}
+                >
+                  Your name
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="John Smith"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData((p) => ({ ...p, name: e.target.value }))
+                  }
+                  className="w-full border rounded-xl px-4 py-3 text-sm outline-none transition-colors"
+                  style={{
+                    borderColor: "var(--color-border)",
+                    color: "var(--color-text)",
+                    backgroundColor: "white",
+                  }}
+                />
+              </div>
+              <div>
+                <label
+                  className="block text-xs font-medium mb-1"
+                  style={{ color: "var(--color-text)" }}
+                >
+                  Email address
+                </label>
+                <input
+                  type="email"
+                  required
+                  placeholder="john@heatingsolutions.co.uk"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData((p) => ({ ...p, email: e.target.value }))
+                  }
+                  className="w-full border rounded-xl px-4 py-3 text-sm outline-none transition-colors"
+                  style={{
+                    borderColor: "var(--color-border)",
+                    color: "var(--color-text)",
+                    backgroundColor: "white",
+                  }}
+                />
+              </div>
+              <div>
+                <label
+                  className="block text-xs font-medium mb-1"
+                  style={{ color: "var(--color-text)" }}
+                >
+                  Current website (type "none" if you have no site)
+                </label>
+                <input
+                  type="text"
+                  required
+                  placeholder="heatingsolutions.co.uk or none"
+                  value={formData.website}
+                  onChange={(e) =>
+                    setFormData((p) => ({ ...p, website: e.target.value }))
+                  }
+                  className="w-full border rounded-xl px-4 py-3 text-sm outline-none transition-colors"
+                  style={{
+                    borderColor: "var(--color-border)",
+                    color: "var(--color-text)",
+                    backgroundColor: "white",
+                  }}
+                />
+              </div>
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full py-3.5 text-white font-semibold rounded-xl transition-opacity hover:opacity-90 text-sm"
+                style={{ backgroundColor: "var(--color-accent)" }}
+              >
+                {loading ? "Sending..." : "Send Me The Free Scorecard →"}
+              </button>
+              <p
+                className="text-xs text-center"
+                style={{ color: "var(--color-muted)" }}
+              >
+                Sent within 4 hours on UK business days (9am–6pm GMT). No
+                spam.
+              </p>
+            </form>
+          </div>
+        ) : (
+          <div className="text-center py-8">
+            <div
+              className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+              style={{ backgroundColor: "#DCFCE7" }}
+            >
+              <CheckCircle2
+                className="w-8 h-8"
+                style={{ color: "#059669" }}
+                aria-hidden="true"
+              />
+            </div>
+            <h3
+              className="text-xl font-bold mb-2"
+              style={{
+                fontFamily: "var(--font-display)",
+                color: "var(--color-text)",
+              }}
+            >
+              Got it — you are on the list.
+            </h3>
+            <p className="text-sm" style={{ color: "var(--color-muted)" }}>
+              I will send your HVAC Website Scorecard within 4 hours on UK
+              business days (9am–6pm GMT). Check your inbox.
+            </p>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
+// ============================================================
+// LEAD MAGNET 2 — COST CALCULATOR (Loss Framing)
+// ============================================================
+function CostCalculator() {
+  const [jobValue, setJobValue] = useState("");
+  const [monthlyJobs, setMonthlyJobs] = useState("");
+  const [siteScore, setSiteScore] = useState("");
+  const [result, setResult] = useState<CalcResult | null>(null);
+
+  const calculate = () => {
+    const value = parseFloat(jobValue);
+    const jobs = parseFloat(monthlyJobs);
+    const score = parseFloat(siteScore);
+    if (!value || !jobs || !score || score < 1 || score > 10) return;
+
+    // Loss rate by score bracket
+    let lossRate = 0;
+    if (score <= 2) lossRate = 0.55;
+    else if (score <= 4) lossRate = 0.4;
+    else if (score <= 6) lossRate = 0.25;
+    else if (score <= 8) lossRate = 0.1;
+    else lossRate = 0.03;
+
+    const monthly = Math.round(value * jobs * lossRate);
+    const yearly = monthly * 12;
+    const breakEvenDays =
+      monthly > 0 ? Math.ceil(1197 / (monthly / 30)) : 0;
+    setResult({ monthly, yearly, breakEvenDays });
+  };
+
+  return (
+    <section
+      className="section-padding px-4"
+      style={{ backgroundColor: "var(--color-surface)" }}
+    >
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-10">
+          <p
+            className="label-text mb-2"
+            style={{ color: "var(--color-accent)" }}
+          >
+            The real cost
+          </p>
+          <h2 className="h2 mb-3">
+            What Is Your Current Website Costing You?
+          </h2>
+          <p
+            className="body-text max-w-xl mx-auto"
+          >
+            Three numbers. 30 seconds. Most engineers are surprised by the
+            result.
+          </p>
+        </div>
+
+        <div
+          className="rounded-2xl border p-4 sm:p-8  space-y-6"
+          style={{
+            backgroundColor: "white",
+            borderColor: "var(--color-border)",
+          }}
+        >
+          <div className="grid md:grid-cols-3 gap-4">
+            <div>
+              <label
+                className="block text-sm font-medium mb-2"
+                style={{ color: "var(--color-text)" }}
+              >
+                Average job value (£)
+              </label>
+              <input
+                type="number"
+                placeholder="e.g. 2500"
+                value={jobValue}
+                onChange={(e) => setJobValue(e.target.value)}
+                className="w-full border rounded-xl px-4 py-3 text-sm outline-none transition-colors"
+                style={{ borderColor: "var(--color-border)" }}
+              />
+              <p
+                className="text-xs mt-1"
+                style={{ color: "var(--color-muted)" }}
+              >
+                Boiler install avg: £2,500
+              </p>
+            </div>
+            <div>
+              <label
+                className="block text-sm font-medium mb-2"
+                style={{ color: "var(--color-text)" }}
+              >
+                Jobs completed per month
+              </label>
+              <input
+                type="number"
+                placeholder="e.g. 8"
+                value={monthlyJobs}
+                onChange={(e) => setMonthlyJobs(e.target.value)}
+                className="w-full border rounded-xl px-4 py-3 text-sm outline-none transition-colors"
+                style={{ borderColor: "var(--color-border)" }}
+              />
+              <p
+                className="text-xs mt-1"
+                style={{ color: "var(--color-muted)" }}
+              >
+                Your current monthly average
+              </p>
+            </div>
+            <div>
+              <label
+                className="block text-sm font-medium mb-2"
+                style={{ color: "var(--color-text)" }}
+              >
+                Rate your current website (1–10)
+              </label>
+              <input
+                type="number"
+                min="1"
+                max="10"
+                placeholder="e.g. 3"
+                value={siteScore}
+                onChange={(e) => setSiteScore(e.target.value)}
+                className="w-full border rounded-xl px-4 py-3 text-sm outline-none transition-colors"
+                style={{ borderColor: "var(--color-border)" }}
+              />
+              <p
+                className="text-xs mt-1"
+                style={{ color: "var(--color-muted)" }}
+              >
+                No website at all = 1
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={calculate}
+            className="w-full py-4 text-white font-semibold rounded-xl transition-opacity hover:opacity-90"
+            style={{ backgroundColor: "var(--color-accent)" }}
+          >
+            Calculate My Loss →
+          </button>
+
+          {result && (
+            <div
+              className="rounded-xl border-2 p-6 space-y-5"
+              style={{
+                borderColor: "var(--color-accent)",
+                backgroundColor: "#FDF5F2",
+              }}
+            >
+              {/* Three numbers */}
+              <div className="grid grid-cols-3 gap-1 sm:gap-4 text-center">
+                <div>
+                  <p
+                    className="text-xs mb-1"
+                    style={{ color: "var(--color-muted)" }}
+                  >
+                    Lost per month
+                  </p>
+                  <p
+                    className="text-base sm:text-3xl font-black"
+                    style={{
+                      color: "#B91C1C",
+                      fontFamily: "var(--font-display)",
+                    }}
+                  >
+                    £{result.monthly.toLocaleString()}
+                  </p>
+                </div>
+                <div>
+                  <p
+                    className="text-xs mb-1"
+                    style={{ color: "var(--color-muted)" }}
+                  >
+                    Lost per year
+                  </p>
+                  <p
+                    className="text-base sm:text-3xl font-black"
+                    style={{
+                      color: "#B91C1C",
+                      fontFamily: "var(--font-display)",
+                    }}
+                  >
+                    £{result.yearly.toLocaleString()}
+                  </p>
+                </div>
+                <div>
+                  <p
+                    className="text-xs mb-1"
+                    style={{ color: "var(--color-muted)" }}
+                  >
+                    Break even in
+                  </p>
+                  <p
+                    className="text-base sm:text-3xl font-black"
+                    style={{
+                      color: "#059669",
+                      fontFamily: "var(--font-display)",
+                    }}
+                  >
+                    {result.breakEvenDays}d
+                  </p>
+                </div>
+              </div>
+
+              {/* Breakdown table */}
+              <div
+                className="border-t pt-4 space-y-2"
+                style={{ borderColor: "#D4795E" }}
+              >
+                <div className="flex justify-between text-sm">
+                  <span style={{ color: "var(--color-muted)" }}>
+                    Estimated monthly loss from weak website
+                  </span>
+                  <span
+                    className="font-semibold"
+                    style={{ color: "#B91C1C" }}
+                  >
+                    £{result.monthly.toLocaleString()}
+                  </span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span style={{ color: "var(--color-muted)" }}>
+                    The 10-Day HVAC Lead Engine — one-time
+                  </span>
+                  <span
+                    className="font-semibold"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    £1,197
+                  </span>
+                </div>
+                <div
+                  className="flex justify-between text-sm font-bold pt-2 border-t"
+                  style={{ borderColor: "#D4795E" }}
+                >
+                  <span style={{ color: "var(--color-text)" }}>
+                    You recover the investment in
+                  </span>
+                  <span style={{ color: "#059669" }}>
+                    {result.breakEvenDays} days
+                  </span>
+                </div>
+              </div>
+
+              <a
+                href="#pricing"
+                className="block w-full text-center py-3 text-white font-bold rounded-xl transition-opacity hover:opacity-90 text-sm"
+                style={{ backgroundColor: "var(--color-accent)" }}
+              >
+                Fix This for £1,197 →
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ============================================================
+// LEAD MAGNET 3 — 5-DAY EMAIL COURSE
+// ============================================================
+function EmailCourseSection() {
+  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      await fetch("https://formspree.io/f/mlgydbwe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _subject: `5-Day Course Signup — ${formData.name}`,
+        }),
+      });
+      setSubmitted(true);
+    } catch {
+      setLoading(false);
+    }
+  };
+
+  const DAYS = [
+    { day: "01", title: "Why word of mouth will eventually fail you" },
+    { day: "02", title: "The one Google element most HVAC sites get wrong" },
+    { day: "03", title: "Why your competitor is getting calls meant for you" },
+    {
+      day: "04",
+      title: "What a booked-job website looks like vs a nice website",
+    },
+    {
+      day: "05",
+      title: "The 10-day path from invisible online to phone ringing",
+    },
+  ];
+
+  return (
+    <section
+      className="section-padding px-4"
+      style={{ backgroundColor: "var(--color-bg)" }}
+    >
+      <div className="max-w-4xl mx-auto">
+        <div
+          className="rounded-2xl border overflow-hidden"
+          style={{ borderColor: "var(--color-border)" }}
+        >
+          <div className="grid md:grid-cols-2">
+            {/* Left — course preview */}
+            <div
+              className="p-5 sm:p-8 space-y-6"
+              style={{ backgroundColor: "var(--color-surface)" }}
+            >
+              <div>
+                <p
+                  className="label-text mb-2"
+                  style={{ color: "var(--color-accent)" }}
+                >
+                  FREE 5-DAY EMAIL GUIDE
+                </p>
+                <h3
+                  className="text-2xl font-bold leading-snug"
+                  style={{
+                    fontFamily: "var(--font-display)",
+                    color: "var(--color-text)",
+                  }}
+                >
+                  Why UK Heating Engineers Lose Jobs Online
+                </h3>
+                <p
+                  className="text-sm mt-3 leading-relaxed"
+                  style={{ color: "var(--color-muted)" }}
+                >
+                  One short email per day for 5 days. No sales pitch until Day
+                  5. Unsubscribe anytime.
+                </p>
+              </div>
+              <ol className="space-y-3">
+                {DAYS.map((d) => (
+                  <li key={d.day} className="flex items-start gap-3">
+                    <span
+                      className="text-xs font-bold shrink-0 mt-0.5 w-5"
+                      style={{ color: "var(--color-accent)" }}
+                    >
+                      {d.day}
+                    </span>
+                    <span
+                      className="text-sm"
+                      style={{ color: "var(--color-muted)" }}
+                    >
+                      {d.title}
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+
+            {/* Right — form */}
+            <div
+              className="p-5 sm:p-8 flex flex-col justify-center"
+              style={{ backgroundColor: "white" }}
+            >
+              {!submitted ? (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <h4
+                    className="font-semibold"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    Get Day 1 in your inbox now
+                  </h4>
+                  <div>
+                    <label
+                      className="block text-xs font-medium mb-1"
+                      style={{ color: "var(--color-text)" }}
+                    >
+                      First name
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="John"
+                      value={formData.name}
+                      onChange={(e) =>
+                        setFormData((p) => ({ ...p, name: e.target.value }))
+                      }
+                      className="w-full border rounded-xl px-4 py-3 text-sm outline-none transition-colors"
+                      style={{ borderColor: "var(--color-border)" }}
+                    />
+                  </div>
+                  <div>
+                    <label
+                      className="block text-xs font-medium mb-1"
+                      style={{ color: "var(--color-text)" }}
+                    >
+                      Email address
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      placeholder="john@plumbingco.co.uk"
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData((p) => ({ ...p, email: e.target.value }))
+                      }
+                      className="w-full border rounded-xl px-4 py-3 text-sm outline-none transition-colors"
+                      style={{ borderColor: "var(--color-border)" }}
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full py-3.5 text-white font-semibold rounded-xl transition-opacity hover:opacity-90 text-sm"
+                    style={{ backgroundColor: "var(--color-accent)" }}
+                  >
+                    {loading ? "Signing you up..." : "Send Me Day 1 →"}
+                  </button>
+                  <p
+                    className="text-xs text-center"
+                    style={{ color: "var(--color-muted)" }}
+                  >
+                    No spam. 5 emails over 5 days only. Done.
+                  </p>
+                </form>
+              ) : (
+                <div className="text-center">
+                  <div
+                    className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4"
+                    style={{ backgroundColor: "#DCFCE7" }}
+                  >
+                    <CheckCircle2
+                      className="w-7 h-7"
+                      style={{ color: "#059669" }}
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h4
+                    className="font-semibold mb-2"
+                    style={{ color: "var(--color-text)" }}
+                  >
+                    Day 1 is on its way.
+                  </h4>
+                  <p
+                    className="text-sm"
+                    style={{ color: "var(--color-muted)" }}
+                  >
+                    Check your inbox in the next few minutes. Five emails. Five
+                    days. Then nothing unless you ask.
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -328,9 +1035,9 @@ export default function HVACLandingPage() {
   // ---- REPLACE BEFORE GOING LIVE ----
   const WHATSAPP_LINK = "https://wa.me/923107555744";
   const EMAIL_STARTER =
-    "mailto:fasih.khan.dev@gmail.com?subject=HVAC Lead Engine - Starter";
+    "mailto:fasih@buildbyfasih.me?subject=HVAC Lead Engine - Starter";
   const EMAIL_STANDARD =
-    "mailto:fasih.khan.dev@gmail.com?subject=HVAC Lead Engine - Standard";
+    "mailto:fasih@buildbyfasih.me?subject=HVAC Lead Engine - Standard";
   const SWIFT_HEAT_URL = "https://swift-heat-london.vercel.app";
   const BRIGHTWIRE_URL = "https://brightwire-electrical.vercel.app";
   // ------------------------------------
@@ -440,7 +1147,7 @@ export default function HVACLandingPage() {
           borderColor: "var(--color-border)",
         }}
       >
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {TRUST_ITEMS.map((item) => (
             <div
               key={item.label}
@@ -469,6 +1176,7 @@ export default function HVACLandingPage() {
           ))}
         </div>
       </div>
+      <ScorecardSection />
 
       {/* ================================================
           PAIN SECTION
@@ -496,7 +1204,7 @@ export default function HVACLandingPage() {
             {PLATFORMS.map((p) => (
               <div
                 key={p.name}
-                className="rounded-2xl p-6 space-y-4 border"
+                className="rounded-2xl p-4 md:p-6 space-y-4 border"
                 style={{
                   backgroundColor: "white",
                   borderColor: "var(--color-border)",
@@ -510,7 +1218,7 @@ export default function HVACLandingPage() {
                   />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-red-600">{p.monthly}</p>
+                  <p className="text-lg md:text-2xl font-bold text-red-600 break-words">{p.monthly}</p>
                   <p
                     className="text-xs mt-0.5"
                     style={{ color: "var(--color-muted)" }}
@@ -542,7 +1250,7 @@ export default function HVACLandingPage() {
 
           {/* Pivot callout */}
           <div
-            className="text-center rounded-2xl p-10 border"
+            className="text-center rounded-2xl p-6 md:p-10 border"
             style={{ backgroundColor: "#FDF5F2", borderColor: "#D4795E" }}
           >
             <p
@@ -552,13 +1260,13 @@ export default function HVACLandingPage() {
               There is a fourth option.
             </p>
             <p
-              className="text-2xl md:text-3xl font-bold leading-tight"
+              className="text-xl md:text-3xl font-bold leading-tight"
               style={{
                 fontFamily: "var(--font-display)",
                 color: "var(--color-text)",
               }}
             >
-              Own the channel that brings you leads — permanently.{" "}
+              Own the channel that brings you leads, permanently.{" "}
               <span style={{ color: "var(--color-accent)" }}>
                 Pay for it once. Use it for the rest of your business.
               </span>
@@ -868,10 +1576,10 @@ export default function HVACLandingPage() {
 
           <ol className="space-y-0">
             {HOW_IT_WORKS.map((step, i) => (
-              <li key={step.step} className="flex gap-6">
+              <li key={step.step} className="flex gap-3 md:gap-6">
                 <div className="flex flex-col items-center">
                   <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg shrink-0"
+                    className="w-9 h-9 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white font-bold text-sm md:text-lg shrink-0"
                     style={{ backgroundColor: "var(--color-accent)" }}
                   >
                     {step.step}
@@ -930,9 +1638,8 @@ export default function HVACLandingPage() {
               {JOB_VALUES.map((row, i) => (
                 <div
                   key={row.job}
-                  className={`flex justify-between items-center py-3.5 ${
-                    i < JOB_VALUES.length - 1 ? "border-b" : ""
-                  }`}
+                  className={`flex justify-between items-center py-3.5 ${i < JOB_VALUES.length - 1 ? "border-b" : ""
+                    }`}
                   style={{ borderColor: "var(--color-border)" }}
                 >
                   <span
@@ -962,9 +1669,8 @@ export default function HVACLandingPage() {
               {YEAR_COMPARISON.map((row, i) => (
                 <div
                   key={row.label}
-                  className={`flex justify-between items-center py-3.5 ${
-                    i < YEAR_COMPARISON.length - 1 ? "border-b" : ""
-                  }`}
+                  className={`flex justify-between items-center py-3.5 ${i < YEAR_COMPARISON.length - 1 ? "border-b" : ""
+                    }`}
                   style={{ borderColor: "var(--color-border)" }}
                 >
                   <span
@@ -1008,7 +1714,7 @@ export default function HVACLandingPage() {
           </div>
         </div>
       </section>
-
+      <CostCalculator />
       {/* ================================================
           PRICING
           Surface bg — white cards — terracotta border on featured
@@ -1032,7 +1738,7 @@ export default function HVACLandingPage() {
           <div className="grid md:grid-cols-2 gap-8 items-start">
             {/* STARTER */}
             <div
-              className="rounded-2xl p-8 space-y-7 border"
+              className="rounded-2xl p-4 sm:p-8 space-y-7 border"
               style={{
                 backgroundColor: "white",
                 borderColor: "var(--color-border)",
@@ -1049,7 +1755,7 @@ export default function HVACLandingPage() {
               </div>
               <div>
                 <p
-                  className="text-sm line-through"
+                  className="text-md font-semibold line-through"
                   style={{ color: "var(--color-muted)" }}
                 >
                   £{starterValue.toLocaleString()} total value
@@ -1108,13 +1814,13 @@ export default function HVACLandingPage() {
 
             {/* STANDARD */}
             <div
-              className="rounded-2xl p-8 space-y-7 relative border-2"
+              className="rounded-2xl p-4 sm:p-8 pt-12 sm:pt-8 space-y-7 relative border-2"
               style={{
                 backgroundColor: "white",
                 borderColor: "var(--color-accent)",
               }}
             >
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap">
+              <div className="absolute top-4 left-1/2 -translate-x-1/2 whitespace-nowrap">
                 <span
                   className="px-5 py-1.5 text-white text-sm font-bold rounded-full"
                   style={{ backgroundColor: "var(--color-accent)" }}
@@ -1133,7 +1839,7 @@ export default function HVACLandingPage() {
               </div>
               <div>
                 <p
-                  className="text-sm line-through"
+                  className="text-md font-semibold line-through"
                   style={{ color: "var(--color-muted)" }}
                 >
                   £{standardValue.toLocaleString()} total value
@@ -1309,18 +2015,16 @@ export default function HVACLandingPage() {
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 shrink-0 mt-0.5 transition-transform duration-200 ${
-                      openFAQ === i ? "rotate-180" : ""
-                    }`}
+                    className={`w-5 h-5 shrink-0 mt-0.5 transition-transform duration-200 ${openFAQ === i ? "rotate-180" : ""
+                      }`}
                     style={{ color: "var(--color-accent)" }}
                     aria-hidden="true"
                   />
                 </button>
 
                 <div
-                  className={`overflow-hidden transition-all duration-200 ${
-                    openFAQ === i ? "max-h-96" : "max-h-0"
-                  }`}
+                  className={`overflow-hidden transition-all duration-200 ${openFAQ === i ? "max-h-96" : "max-h-0"
+                    }`}
                 >
                   <div
                     className="px-6 pb-6 text-sm leading-relaxed border-t pt-4"
@@ -1343,6 +2047,7 @@ export default function HVACLandingPage() {
           Dark bookend — terracotta CTA — white text
           Uses var(--color-text) = #1A1A1A for full contrast finish
       ================================================ */}
+      <EmailCourseSection />
       <section
         className="py-28 px-4"
         style={{ backgroundColor: "var(--color-text)" }}

@@ -129,7 +129,7 @@ export default function AboutPage() {
                   Or agencies that disappear. I do the opposite. Clear timeline.
                   Fixed delivery. No chasing. You know what’s happening at every
                   step. I’ve built real projects used by real businesses. Not
-                  just demos.
+                  just demos.Solo specialist, not an agency. I own every project I take on
                 </p>
               </div>
             </div>
@@ -261,10 +261,10 @@ export default function AboutPage() {
                 Get My Site Built
               </Button>
               <a
-                href="mailto:contactme@buildbyfasih.me"
+                href="mailto:fasih@buildbyfasih.me"
                 className="text-[14px] text-[var(--color-muted)] hover-accent no-underline"
               >
-                contactme@buildbyfasih.me
+                fasih@buildbyfasih.me
               </a>
             </div>
           </div>

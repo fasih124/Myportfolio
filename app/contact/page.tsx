@@ -15,7 +15,7 @@ const contactLinks = [
     icon: Mail,
     label: "Send a message",
     value: "contactme@buildbyfasih.me",
-    href: "mailto:contactme@buildbyfasih.me",
+    href: "mailto:fasih@buildbyfasih.me",
   },
   {
     icon: Link,
