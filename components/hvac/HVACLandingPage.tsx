@@ -376,6 +376,12 @@ function ScorecardSection() {
           _subject: `HVAC Scorecard Request — ${formData.name}`,
         }),
       });
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "scorecard_request", {
+          event_category: "lead_magnet",
+          event_label: "hvac_scorecard",
+        });
+      }
       setSubmitted(true);
     } catch {
       setLoading(false);
@@ -588,6 +594,15 @@ function CostCalculator() {
     const yearly = monthly * 12;
     const breakEvenDays =
       monthly > 0 ? Math.ceil(1197 / (monthly / 30)) : 0;
+
+    // Track calculator engagement
+    if (typeof window !== "undefined" && (window as any).gtag) {
+      (window as any).gtag("event", "calculator_used", {
+        event_category: "engagement",
+        event_label: "cost_calculator",
+        value: monthly,
+      });
+    }
     setResult({ monthly, yearly, breakEvenDays });
   };
 
@@ -840,6 +855,12 @@ function EmailCourseSection() {
           _subject: `5-Day Course Signup — ${formData.name}`,
         }),
       });
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag("event", "email_course_signup", {
+          event_category: "lead_magnet",
+          event_label: "5_day_course",
+        });
+      }
       setSubmitted(true);
     } catch {
       setLoading(false);
